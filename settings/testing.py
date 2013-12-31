@@ -35,7 +35,7 @@ DATABASES = {
 ##################################################################
 
 # The name of the class to use for starting the test suite.
-TEST_RUNNER = 'testrunner.NoseCoverageTestRunner'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 PASSWORD_HASHERS = (
     'django.contrib.auth.hashers.MD5PasswordHasher',
@@ -87,6 +87,7 @@ LOGGING = {
 
 TESTING_APPS = (
     # Testing specific apps here
+    'django_nose',
 )
 
 INSTALLED_APPS = EXTERNAL_APPS + TESTING_APPS + INTERNAL_APPS
