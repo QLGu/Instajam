@@ -12,7 +12,7 @@ def test(integration=1):
         $ fab test
         $ fab test:integration=0
     """
-    command = 'django-admin.py test -v 2 --where=./apps --settings=instajan.settings.testing'
+    command = 'django-admin.py test -v 2 --where=./apps --settings=instajam.settings.testing'
 
     if int(integration) == 0:
         command += " --exclude='integration_tests' --exclude='jasmine_tests'"

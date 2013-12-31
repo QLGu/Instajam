@@ -1,4 +1,4 @@
-Instajan
+Instajam
 ========
 --------
 
@@ -8,16 +8,16 @@ Instajan
 
 2.  Make, enter and activate a virtualenv:
 
-        $ virtualenv instajan --no-site-packages
+        $ virtualenv instajam --no-site-packages
         New python executable in clientes/bin/python
         Installing setuptools............done.
-        $ cd instajan/
+        $ cd instajam/
         $ . bin/activate
 
 2.  Clone this repo into a sub-directory of the new virtualenv:
 
-        $ git clone git@github.com:diegotoral/Instajan.git
-        $ cd instajan/
+        $ git clone git@github.com:diegotoral/Instajam.git
+        $ cd instajam/
 
 3.  Go through the following files, editing as necessary:
 
@@ -26,14 +26,14 @@ Instajan
 
 4.  Symlink the project directory into the virtualenv's `site-packages`:
 
-        $ ln -s `pwd` ../lib/python2.6/site-packages/instajan
+        $ ln -s `pwd` ../lib/python2.6/site-packages/instajam
 
     Replace `python2.6` with the installed version of Python on your machine.
 
 5.  Set the `DJANGO_SETTINGS_MODULE` environment variable now, and on every
     virtualenv activation:
 
-        $ export DJANGO_SETTINGS_MODULE=instajan.settings.development
+        $ export DJANGO_SETTINGS_MODULE=instajam.settings.development
         $ echo "!!" >> ../bin/activate
 
 6.  Install the basic project requirements:

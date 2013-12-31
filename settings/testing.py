@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
-from instajan.settings.common import *
+from instajam.settings.common import *
 
 
 ##################################################################
