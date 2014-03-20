@@ -13,6 +13,9 @@ class PostTestCase(TestCase):
         'slug': 'my-first-post'
     }
 
+    def setUp(self):
+        self.post = self.create_post()
+
     def test_verbose_name_for_title(self):
         field = self.get_field('title')
         self.assertEquals(field.verbose_name, 'Title')
@@ -34,12 +37,10 @@ class PostTestCase(TestCase):
         self.assertEquals(field.verbose_name, 'Created at')
 
     def test_slug_is_automatic_generated(self):
-        post = self.get_post()
-        post.save()
+        self.post.save()
+        self.assertEquals(self.POST_DEFAULTS['slug'], self.post.slug)
 
-        self.assertEquals(self.POST_DEFAULTS['slug'], post.slug)
-
-    def get_post(self, **kwargs):
+    def create_post(self, **kwargs):
         """
         Create a new Post object and return.
         """
